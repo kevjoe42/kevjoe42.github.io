@@ -31,9 +31,19 @@
 	<hr>
 	<h2>Welcome to the subduction zone</h2><br>
 	<img src="images/20180714_235554-500x500.jpg" border="4">
-	<iframe src="music/silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+	<iframe src="music/VID_275570724_143617_912.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+</iframe>
 	<audio id="player" autoplay loop>
 		<source src="music/VID_275570724_143617_912.mp3" type="audio/mp3">Your browser does not support the audio tag.
 	</audio>
+	<script>
+		  var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+  		  if (!isChrome){
+      		  $('#iframeAudio').remove()
+  		}
+  			else {
+      			$('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
+  		}
+	</script>
    </body>
 </html>
